@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="FtoC(this.value)"
+                onchange="FtoC(this.value)">
+        </p>
+        <p>Celcius: <span id="outputCelcius"></span></p>
+    </div>
+
+    <div>
+        <p>
+            <label>Celcius</label>
+            <input id="inputFahrenheit" type="number" placeholder="Celcius" oninput="CtoF(this.value)"
+                onchange="CtoF(this.value)">
+        </p>
+        <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+    </div>
+    <script src="Task5.js"></script>
+</body>
+
+</html>
