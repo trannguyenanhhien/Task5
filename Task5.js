@@ -1,37 +1,57 @@
 //Bài1
+// function get1() {
+//     var D = new Date();
+//     var date = D.getDay() + 1;
+//     var month = D.getMonth() + 1;
+//     var year = D.getYear() - 100;
+//     var GMT = D.toUTCString();
+//     var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+//     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+//         "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+//     var data = D.getDate() + '-' + month + '-' + year + '<br>';
+//     data += D.getDate() + '-' + month + '-' + year + ' ' + D.getHours() + ':' + D.getMinutes() + '<br>';
+//     data += D.getDate() + '-' + month + '-' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + '<br>';
+//     data += month + '/' + D.getDate() + '/' + year + '<br>';
+//     if (month < 10) { data += '0' + month + '/' + D.getDate() + '/' + year + '<br>'; }
+//     else { data += month + '/' + D.getDate() + '/' + year + '<br>'; }
+//     data += months[D.getMonth()] + ' ' + D.getDate() + ', ' + D.getFullYear() + '<br>';
+//     data += months[D.getMonth() + 12] + ' ' + D.getDate() + ' ' + D.getFullYear() + '<br>';
+//     if (D.getHours() < 12) {
+//         data += D.getDate() + '/' + month + '/' + year + ' ' + D.getHours() + ':' + D.getMinutes() + ' AM' + '<br>';
+//     }
+//     else {
+//         var hours = D.getHours() - 12;
+//         data += D.getDate() + '/' + month + '/' + year + ' ' + hours + ':' + D.getMinutes() + ' PM' + '<br>';
+//     }
+//     data += D.getDate() + '-' + months[D.getMonth()] + '-' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + '<br>';
+//     data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + '<br>';
+//     data += D.getFullYear() + '-' + month + '-' + D.getDate() + '+' + -D.getTimezoneOffset() / 60 + ':00' + '<br>';
+//     if (D.getHours() < 12) {
+//         data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + ' AM ' + GMT.substr(26, 3);
+//     }
+//     else {
+//         data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + ' ' + hours + ':' + D.getMinutes() + ':' + D.getSeconds() + ' PM ' + GMT.substr(26, 3);
+//     }
+//     document.getElementById('result1').innerHTML = data;
+// }
 function get1() {
-    var D = new Date();
-    var date = D.getDay() + 1;
-    var month = D.getMonth() + 1;
-    var year = D.getYear() - 100;
-    var GMT = D.toUTCString();
-    var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var data = D.getDate() + '-' + month + '-' + year + '<br>';
-    data += D.getDate() + '-' + month + '-' + year + ' ' + D.getHours() + ':' + D.getMinutes() + '<br>';
-    data += D.getDate() + '-' + month + '-' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + '<br>';
-    data += month + '/' + D.getDate() + '/' + year + '<br>';
-    if (month < 10) { data += '0' + month + '/' + D.getDate() + '/' + year + '<br>'; }
-    else { data += month + '/' + D.getDate() + '/' + year + '<br>'; }
-    data += months[D.getMonth()] + ' ' + D.getDate() + ', ' + D.getFullYear() + '<br>';
-    data += months[D.getMonth() + 12] + ' ' + D.getDate() + ' ' + D.getFullYear() + '<br>';
-    if (D.getHours() < 12) {
-        data += D.getDate() + '/' + month + '/' + year + ' ' + D.getHours() + ':' + D.getMinutes() + ' AM' + '<br>';
-    }
-    else {
-        var hours = D.getHours() - 12;
-        data += D.getDate() + '/' + month + '/' + year + ' ' + hours + ':' + D.getMinutes() + ' PM' + '<br>';
-    }
-    data += D.getDate() + '-' + months[D.getMonth()] + '-' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + '<br>';
-    data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + '<br>';
-    data += D.getFullYear() + '-' + month + '-' + D.getDate() + '+' + -D.getTimezoneOffset() / 60 + ':00' + '<br>';
-    if (D.getHours() < 12) {
-        data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + ' ' + D.getHours() + ':' + D.getMinutes() + ':' + D.getSeconds() + ' AM ' + GMT.substr(26, 3);
-    }
-    else {
-        data += days[D.getDay()] + ', ' + months[D.getMonth() + 12] + ' ' + D.getDate() + ', ' + D.getFullYear() + ' ' + hours + ':' + D.getMinutes() + ':' + D.getSeconds() + ' PM ' + GMT.substr(26, 3);
-    }
+    var day = new Date("1999-03-25T09:03:44Z");
+    var data = (moment(day).format("DD-MM-YY")) + '<br>';
+    data += (moment(day).format("DD-MM-YY HH:MM")) + '<br>';
+    data += (moment(day).format("DD-MM-YYYY kk:mm:ss")) + '<br>';
+    data += (moment(day).format("DD/M/YY")) + '<br>';
+    data += (moment(day).format("DD/MM/YY")) + '<br>';
+    data += (moment(day).format("MMM DD, YYYY")) + '<br>';
+    data += (moment(day).format("MMMM DD YYYY")) + '<br>';
+    data += (moment(day).format("DD/MM/YY hh:mm A")) + '<br>';
+    data += (moment(day).format("DD-MMM-YYYY HH:MM:ss")) + '<br>';
+    data += (moment(day).format("dddd, MMM DD, YYYY")) + '<br>';
+    data += (moment(day).format("YYYY-MM-DDZ")) + '<br>';
+    data += (
+        moment
+            .parseZone(moment(day).format())
+            .format("dddd, MMMM DD, YYYY hh:mm:ss A z")
+    );
     document.getElementById('result1').innerHTML = data;
 }
 //Bài2
@@ -57,11 +77,11 @@ function remove() {
     document.getElementById('result5').innerHTML = text;
 }
 //Bài6
-var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
+var names = ["Yaakov", "john", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula", "Laura", "Jim"];
 var newArr = new Array();
 function get6() {
     for (var i = 0; i < names.length; i++) {
-        if (names[i].slice(0, 1) == "J") {
+        if (names[i].slice(0, 1) == "J" || names[i].slice(0, 1).toLowerCase() == "j") {
             newArr.push('Goodbye ' + names[i]);
         }
         else {
